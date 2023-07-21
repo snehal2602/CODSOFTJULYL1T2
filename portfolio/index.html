@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-regular fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-regular fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p> Web Developer</p>
+            <h1> Hi , I'm <span>Snehal Jagdale.</span><br> From Navi Mumbai</h1>
+        </div>
+    </div>
+
+    </div>
+    
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="About-col-1">
+                    <img src="snehal2.png" alt="">
+                </div>
+                <div class="About-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Snehal, I’ve been studying Information Technology for two years. In order to kick-start my career before I graduate, I am looking for a job of a web developer, since that’s what I’ve been doing already for four years in my free time. Designing websites for friends, developing simple e-shops with the help of some open source content-management systems, and so on. Besides that I am a normal guy who enjoys hiking and spending time with friends, while not working or studying, which takes most of my time of course. If I should pick the best website I’ve designed up to this point. I am ambitious and hard-working and believe you’ll give me a chance to prove my words.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link " onclick="opentab('Skills')">Skills</p>
+
+                    </div>
+                    <div class="tab-contents">
+                        <ul>
+                            <li><span> HTML </span></li>
+                            <li><span> CSS </span></li>
+                            <li><span> Javascript </span></li>
+                            <li><span> Python </span></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------services----------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h1>web Design</h1>
+                    <p>Web design refers to the design of websites that are displayed on the internet. 
+                    It usually refers to the user experience aspects of website development rather than software development.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h1>UI Design</h1>
+                    <p>User Interface (UI) and User Experience (UX) Design play key roles in the experience users have when interacting
+                         with digital products and applications. 
+                        In this course, we’ll cover the theory and methodologies behind UI and UX design.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h1>App Design</h1>
+                    <p>Mobile app design encompasses both the user interface (UI) and user experience (UX). 
+                        Designers are responsible for the overall style of the app, including things like the colour scheme,
+                         font selection, and the types of buttons and widgets the user will use.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!---------------------------------contact------------------------------->
+    
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>snehaljagadale2002@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>9325238947</p>
+                    <p><i class="fa-sharp fa-solid fa-location-dot"></i>Kalamboli,Navi Mumbai.</p>
+                    <div class="social-icons">
+                        <a href="https://www.snapchat.com/add/spj_26?share_id=wdXiB4sHEjs&locale=en-US"><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="https://instagram.com/jagdale._.snehal?igshid=MzNlNGNkZWQ4Mg=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/snehal-jagdale-511951253"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/snehal2602"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Snehal Jagdale CV (1).pdf"  download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2"> Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © snehal Jagdale <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+    
+    <script>
+        
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for (tablink of tablinks){
+                tablink.classlist.remove("active-link"); 
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-link");
+            }
+            event.currentTarget.classlist.add("active-link");
+        }
+
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwJQGNG_TkAmf3mtbk3GgU7yJZoJki3h8ht7PcD_n2qvbys0jgrEmzMqxhKAHFSQ3QEow/exec"
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
